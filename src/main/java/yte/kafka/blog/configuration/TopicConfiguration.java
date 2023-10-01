@@ -19,7 +19,7 @@ public class TopicConfiguration {
     NewTopic userTopic() {
         return TopicBuilder.name("user")
                 .partitions(5)
-                .replicas(2)
+                .replicas(1)
                 .build();
     }
 }
