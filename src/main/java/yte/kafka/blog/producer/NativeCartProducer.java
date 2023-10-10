@@ -13,7 +13,7 @@ import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
-public class NativeKafkaProducer {
+public class NativeCartProducer {
 
     private final ProducerFactory<String, String> producerFactory;
     private final ObjectMapper objectMapper;

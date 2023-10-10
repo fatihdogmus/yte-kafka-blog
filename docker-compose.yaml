@@ -6,9 +6,11 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - ~/DockerVolumes/postgres:/bitnami/postgresql
+      - ~/DockerVolumes/postgres:/var/lib/postgresql/data
     environment:
-      - POSTGRESQL_TIMEZONE=Europe/Istanbul
+      - POSTGRES_PASSWORD=q
+      - TZ=Europe/Istanbul
+      - LANG=tr-TR.utf8
       - POSTGRES_INITDB_ARGS=--locale-provider=icu --icu-locale=tr-TR
     restart: always
   kafka:
